@@ -15,8 +15,9 @@ solutions can be made accessible and practical, shaping the future of home autom
 digital companionship.
 
 
-🧠 SOFTWARE DESCRIPTION
-🔧 Arduino IDE
+##🧠 SOFTWARE DESCRIPTION
+
+###🔧 Arduino IDE
 The Arduino IDE is used to program the hardware components of the robot. The Arduino Mega board handles body and chassis control, reading data from sensors like gas, temperature, fire, and motion sensors. The ESP8266 Wi-Fi module is also programmed using Arduino IDE to send data to Firebase and receive control commands from mobile apps like Blynk. Overall, Arduino IDE is the foundation for embedded system development and real-time sensor control.
 
 Features:
@@ -31,7 +32,8 @@ Serial Monitoring: Monitors real-time outputs from sensors for debugging.
 
 Multi-Board Programming: Used to program both Arduino Mega and ESP8266.
 
-💻 Visual Studio Code
+##💻 Visual Studio Code
+
 Visual Studio Code is the main development environment for the MERN stack (MongoDB, Express.js, React, Node.js) used to build the robot’s control dashboard and handle backend services. It’s also used to develop Python scripts on Raspberry Pi for AI and camera functionalities.
 
 Features:
@@ -46,7 +48,7 @@ Live Data Fetching: Pulls real-time data from Firebase to update the UI.
 
 REST APIs: Supports emergency call triggers and on-demand sensor data fetch.
 
-☁️ Firebase
+###☁️ Firebase
 Firebase is used as the cloud backend for storing sensor data and sending real-time alerts. It enables the mobile/web dashboard to monitor the robot remotely and supports push notifications during emergencies like gas leaks or fire detection.
 
 Features:
@@ -59,7 +61,7 @@ Authentication (Optional): Can be used to secure access via login.
 
 Auto Sync: Instantly syncs data between devices and dashboard.
 
-📱 Blynk
+###📱 Blynk
 Blynk enables wireless monitoring and control of the robot via a mobile app. It is linked to the ESP8266 and allows real-time updates and commands from anywhere with an internet connection.
 
 Features:
@@ -72,7 +74,7 @@ Push Notifications: Sends alerts from ESP8266 or Firebase to the phone.
 
 Mode Switching: Change robot modes (e.g., Surveillance or Assistant) from the app.
 
-🐍 PyCharm
+###🐍 PyCharm
 PyCharm is used to write and test all Python-based functionalities, especially those on Raspberry Pi. This includes AI modules, voice interaction, image tracking, and real-time data handling.
 
 Features:
@@ -85,7 +87,7 @@ Sensor Monitoring Logic: Reads from Firebase or serial ports and acts on trigger
 
 Camera Feed Processing: Streams and analyzes Pi camera feed in real time.
 
-🔬 Google Colab
+###🔬 Google Colab
 Google Colab is used for developing and training machine learning and computer vision models before deploying them to Raspberry Pi.
 
 Features:
@@ -98,7 +100,7 @@ Visualization: Plots graphs and outputs for model evaluation.
 
 Collaboration: Easy sharing and prototyping of notebooks.
 
-🛠️ Fusion 360
+###🛠️ Fusion 360
 Fusion 360 is used to design the complete mechanical structure of the robot, including head, body, chassis, and mounting areas for controllers, sensors, and batteries. It helps visualize and plan the physical layout before fabrication.
 
 Features:
@@ -111,39 +113,39 @@ Body Frame: Vertical frame for positioning sensors at optimal heights.
 
 Controller Mount: Holds Raspberry Pi, Arduino Mega, and power supply.
 
-🔩 HARDWARE IMPLEMENTATION
-🖥️ OLED 0.96" Display (I2C)
+#🔩 HARDWARE IMPLEMENTATION
+###🖥️ OLED 0.96" Display (I2C)
 A compact 128x64 pixel screen used for displaying sensor values, alerts, and statuses. Communicates via I2C, requiring only two pins (SCL and SDA), making it ideal for microcontroller use.
 
-📡 Ultrasonic Sensor (HC-SR04)
+###📡 Ultrasonic Sensor (HC-SR04)
 Measures distance using ultrasonic waves. Ideal for obstacle detection and navigation, with a range of 2 cm to 400 cm.
 
-🛢️ MQ2 Gas Sensor
+###🛢️ MQ2 Gas Sensor
 Detects gases like LPG, methane, propane, and smoke. Offers both analog and digital outputs, making it useful for gas leak alerts.
 
-🔥 Flame Sensor
+###🔥 Flame Sensor
 Detects flames or fires using infrared light. Can trigger alerts using digital or analog outputs when fire is detected.
 
-🖼️ TFT Display (1.8" SPI)
+###🖼️ TFT Display (1.8" SPI)
 Color display that connects via SPI. Used to show richer visuals such as camera previews, UI elements, and voice feedback.
 
-🌈 RGB LED Strip
+###🌈 RGB LED Strip
 Displays colors to indicate robot modes (e.g., standby, alert). Controlled via digital pins using FastLED or NeoPixel libraries.
 
-⚙️ Motor Driver (L329D)
+###⚙️ Motor Driver (L329D)
 Controls DC motors (forward, reverse, speed) and acts as an interface between microcontroller and motors.
 
-🔋 Li-Po Battery (3.7V x 3 Cells)
+###🔋 Li-Po Battery (3.7V x 3 Cells)
 Three-cell battery pack provides power to motors and electronics. Lightweight and rechargeable with protection circuits for safety.
 
-🚗 Gear Motor
+###🚗 Gear Motor
 DC gear motors provide controlled torque for smooth movement. Drive the robot’s chassis via motor drivers.
 
-🎛️ Arduino Mega
+###🎛️ Arduino Mega
 ATmega2560-based board with 54 digital I/O pins and 16 analog inputs. Handles all core control, sensor integration, and motor functions.
 
-🎤 MAX4466 Microphone
+###🎤 MAX4466 Microphone
 Electret mic with adjustable gain used for voice commands and ambient sound detection.
 
-📶 HC-05 Bluetooth Module
+###📶 HC-05 Bluetooth Module
 Used for Bluetooth-based communication, supporting both master/slave modes. Configured using AT commands.
